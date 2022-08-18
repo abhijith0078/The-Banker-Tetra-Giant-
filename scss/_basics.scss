@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: var(--gray-text);
+}
+ul {
+  list-style: none;
+}
+a:link {
+  text-decoration: none;
+}
+.btn,
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+.pt-m {
+  padding-top: 2rem;
+}
+.pl-m {
+  padding-left: 2rem;
+}
+.pr-m {
+  padding-right: 2rem;
+}
+.pb-m {
+  padding-bottom: 2rem;
+}
+.pl-s {
+  padding-left: 1rem;
+}
+.pr-s {
+  padding-right: 1rem;
+}
+.pb-s {
+  padding-bottom: 1rem;
+}

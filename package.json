@@ -1,0 +1,14 @@
+{
+  "name": "04-the-bank",
+  "version": "1.0.0",
+  "description": "web application for a bank developed using html,css and vanila js",
+  "main": "scrip.js",
+  "scripts": {
+    "run-scss": "node-sass scss/main.scss style.css -w"
+  },
+  "author": "abhijith",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
