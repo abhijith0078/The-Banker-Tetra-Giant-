@@ -30,6 +30,13 @@ button {
   cursor: pointer;
   color: inherit; }
 
+::selection {
+  background-color: var(--primary-color);
+  color: #fff; }
+
+*:focus-within {
+  outline: none; }
+
 .pt-m {
   padding-top: 2rem; }
 
@@ -66,12 +73,14 @@ button {
   justify-content: space-between;
   padding-bottom: 1rem; }
 
+.invisible {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important; }
+
 .intro {
   margin-top: 2rem;
   grid-column: 1/-1; }
-
-.history {
-  background-color: darkblue; }
 
 .heading-light {
   color: #fff;
@@ -86,8 +95,9 @@ button {
   align-items: center;
   gap: Max(0.5em, 1vw); }
   .logo--icon {
-    width: 2.8rem;
-    height: 2.8rem;
+    margin-top: -1rem;
+    width: 4rem;
+    height: 4rem;
     color: var(--primary-color); }
   .logo--header {
     font-family: "DynaPuff", cursive;
@@ -107,9 +117,10 @@ button {
     background-color: rgba(255, 255, 255, 0.404); }
   .login--box::placeholder {
     font-size: 1.2rem; }
-  .login--box:focus-within {
+  .login--box:focus-within,
+  .login .submit--icon:focus-within {
     outline: none;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
   .login .submit--icon {
     width: 1.4rem;
     height: 1.4rem;
@@ -128,7 +139,10 @@ button {
   .intro .balance {
     display: flex;
     align-items: center;
-    font-size: 2rem; }
+    gap: 1vw; }
+  .intro .balance-box {
+    font-size: 2.4rem;
+    font-weight: 400; }
 
 .operations {
   display: flex;
@@ -154,6 +168,10 @@ button {
     border-radius: 0.5em;
     padding: 0.5em 1em;
     background-color: rgba(255, 255, 255, 0.74); }
+  .function .btn:hover,
+  .function .btn:focus-within {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    background-color: #fff; }
   .function .form {
     display: flex;
     flex-direction: column;
@@ -167,6 +185,57 @@ button {
       border-radius: 0.5em;
       border: none; }
     .function .form .input--box:focus-within {
-      outline: none; }
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05); }
     .function .form .input--box::placeholder {
       color: rgba(255, 255, 255, 0.555); }
+
+.history {
+  display: flex;
+  flex-direction: column; }
+
+.transactions {
+  border-radius: 0.5em;
+  padding: 1vw 0.5vw;
+  background-color: #f1f3f5;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  font-size: 1.7rem; }
+  .transactions .transaction {
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1em 1.5em; }
+    .transactions .transaction:not(:last-child) {
+      margin-bottom: 1vw; }
+    .transactions .transaction .reason {
+      padding: 0.2em 0.5em;
+      border-radius: 0.5em;
+      color: #fff;
+      font-size: 1.2rem; }
+    .transactions .transaction .withdraw {
+      background-color: #e03131; }
+    .transactions .transaction .deposit {
+      background-color: #18b022; }
+
+.full-history {
+  flex: 1;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2vw;
+  font-size: 2.2rem;
+  font-weight: 300; }
+
+.progress {
+  display: flex;
+  align-items: center; }
+
+.in {
+  color: #18a321; }
+
+.out {
+  color: #e03131; }

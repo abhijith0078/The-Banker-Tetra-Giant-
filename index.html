@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="banker-light.png" />
     <link rel="stylesheet" href="style.css" />
-    <title>The banker</title>
+    <title>Tetra Giant | The banker</title>
   </head>
   <body>
     <section class="container">
       <!-- header + login  -->
       <header class="header pt-m pl-s pr-s">
         <div class="logo">
-          <ion-icon class="logo--icon" name="help-buoy"></ion-icon>
+          <img src="banker-1.png" alt="tetra giant" class="logo--icon" />
+
           <!-- <ion-icon name="shield-half-outline"></ion-icon> -->
           <span class="logo--header">Tetra Giant</span>
         </div>
@@ -27,16 +29,20 @@
           </button>
         </form>
       </header>
+
       <!-- welcome + balance msgs -->
-      <div class="intro pl-m pr-m">
+      <div class="intro pl-m pr-m invisible">
         <span class="intro--welcome">Welcome back, </span>
-        <span class="balance">
-          &dollar;&nbsp; <span class="balance-amount"> 85652.80 </span>
+        <span class="balance"
+          >Balance :
+          <span class="balance-box"
+            >&dollar;&nbsp; <span class="balance-amount"> 85652.80 </span></span
+          >
         </span>
       </div>
 
       <!-- different functions  -->
-      <ul class="operations">
+      <ul class="operations invisible">
         <!-- request loan -->
         <li class="function function--1">
           <h3 class="heading-3 heading-light pb-s">Request Loan</h3>
@@ -68,36 +74,14 @@
       </ul>
 
       <!-- transaction histories  -->
-      <div class="history">
-        <h2 class="heading-2">Transactions</h2>
-        <ul class="transactions">
-          <li class="transaction">
-            <span class="type deposit"> 1. Deposit</span>
-            <span class="amount">
-              <ion-icon class="balance--icon" name="logo-usd"> </ion-icon
-              >51.50</span
-            >
-          </li>
-          <li class="transaction">
-            <span class="type withdraw"> 2. Withdrawal</span>
-            <span class="amount">
-              <ion-icon class="balance--icon" name="logo-usd"> </ion-icon
-              >2.2</span
-            >
-          </li>
-          <li class="transaction">
-            <span class="type deposit"> 3. Deposit</span>
-            <span class="amount">
-              <ion-icon class="balance--icon" name="logo-usd"> </ion-icon
-              >100.60</span
-            >
-          </li>
-        </ul>
+      <div class="history pr-m invisible">
+        <h2 class="heading-2 pb-s">Transactions</h2>
+        <ul class="transactions"></ul>
 
         <div class="full-history">
-          <span class="in">265</span>
-          <span class="out">180</span>
-          <span class="interest">5.2</span>
+          <span class="progress in">&uarr; 265</span>
+          <span class="progress out">&darr; 180</span>
+          <span class="progress interest">5.2</span>
         </div>
       </div>
     </section>
@@ -110,5 +94,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

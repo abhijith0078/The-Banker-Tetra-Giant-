@@ -29,6 +29,13 @@ button {
   cursor: pointer;
   color: inherit;
 }
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+*:focus-within {
+  outline: none;
+}
 .pt-m {
   padding-top: 2rem;
 }

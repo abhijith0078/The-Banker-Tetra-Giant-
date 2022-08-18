@@ -10,8 +10,9 @@
   gap: Max(0.5em, 1vw);
 
   &--icon {
-    width: 2.8rem;
-    height: 2.8rem;
+    margin-top: -1rem;
+    width: 4rem;
+    height: 4rem;
     color: var(--primary-color);
   }
   &--header {
@@ -37,9 +38,10 @@
   &--box::placeholder {
     font-size: 1.2rem;
   }
-  &--box:focus-within {
+  &--box:focus-within,
+  .submit--icon:focus-within {
     outline: none;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
   }
   .submit {
     &--icon {
@@ -65,7 +67,11 @@
   .balance {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    gap: 1vw;
+  }
+  .balance-box {
+    font-size: 2.4rem;
+    font-weight: 400;
   }
 }
 
@@ -121,6 +127,11 @@
     padding: 0.5em 1em;
     background-color: rgba(255, 255, 255, 0.74);
   }
+  .btn:hover,
+  .btn:focus-within {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
   .form {
     display: flex;
     flex-direction: column;
@@ -136,6 +147,7 @@
     }
     .input--box:focus-within {
       outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
     }
     .input--box::placeholder {
       color: rgba(255, 255, 255, 0.555);
@@ -144,5 +156,60 @@
 }
 
 // history
+.history {
+  display: flex;
+  flex-direction: column;
+}
 .transactions {
+  border-radius: 0.5em;
+  padding: 1vw 0.5vw;
+  background-color: #f1f3f5;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  font-size: 1.7rem;
+
+  .transaction {
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1em 1.5em;
+
+    &:not(:last-child) {
+      margin-bottom: 1vw;
+    }
+    .reason {
+      padding: 0.2em 0.5em;
+      border-radius: 0.5em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .withdraw {
+      background-color: #e03131;
+    }
+    .deposit {
+      background-color: #18b022;
+    }
+  }
+}
+.full-history {
+  flex: 1;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2vw;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+.progress {
+  display: flex;
+  align-items: center;
+}
+.in {
+  color: #18a321;
+}
+.out {
+  color: #e03131;
 }
