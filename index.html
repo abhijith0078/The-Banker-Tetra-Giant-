@@ -19,9 +19,19 @@
           <span class="logo--header">Tetra Giant</span>
         </div>
         <form class="login">
-          <input type="text" placeholder="USER" class="login--box" />
-          <input type="text" placeholder="PIN" class="login--box" />
-          <button class="submit">
+          <input
+            type="text"
+            placeholder="USER"
+            class="login--box"
+            id="username"
+          />
+          <input
+            type="text"
+            placeholder="PIN"
+            class="login--box"
+            id="password"
+          />
+          <button class="submit" id="login--btn">
             <ion-icon
               name="chevron-forward-outline"
               class="submit--icon"
@@ -32,11 +42,13 @@
 
       <!-- welcome + balance msgs -->
       <div class="intro pl-m pr-m invisible">
-        <span class="intro--welcome">Welcome back, </span>
+        <span class="intro--welcome"
+          >Welcome back,&nbsp;<span class="welcome--user"></span>
+        </span>
         <span class="balance"
           >Balance :
           <span class="balance-box"
-            >&dollar;&nbsp; <span class="balance-amount"> 85652.80 </span></span
+            >&dollar;&nbsp; <span class="balance-amount">0</span></span
           >
         </span>
       </div>
@@ -79,8 +91,12 @@
         <ul class="transactions"></ul>
 
         <div class="full-history">
-          <span class="progress in">&uarr; 265</span>
-          <span class="progress out">&darr; 180</span>
+          <span class="progress in"
+            >&uarr; <span class="historyIn">265</span>
+          </span>
+          <span class="progress out"
+            >&darr; <span class="historyOut">180</span>
+          </span>
           <span class="progress interest">5.2</span>
         </div>
       </div>
