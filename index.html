@@ -59,8 +59,12 @@
         <li class="function function--1">
           <h3 class="heading-3 heading-light pb-s">Request Loan</h3>
           <form class="form">
-            <input type="text" placeholder="Amount" class="input--box" />
-            <button class="btn">Process</button>
+            <input
+              type="text"
+              placeholder="Amount"
+              class="input--box request__amount"
+            />
+            <button class="btn request__loan">Process</button>
           </form>
         </li>
 
@@ -68,9 +72,17 @@
         <li class="function function--2">
           <h3 class="heading-3 heading-light pb-s">Transfer Money</h3>
           <form class="form">
-            <input type="text" placeholder="User" class="input--box" />
-            <input type="text" placeholder="Money" class="input--box" />
-            <button class="btn">Process</button>
+            <input
+              type="text"
+              placeholder="User"
+              class="input--box transfer-user"
+            />
+            <input
+              type="text"
+              placeholder="Money"
+              class="input--box transfer-money"
+            />
+            <button class="btn transfer-btn">Submit</button>
           </form>
         </li>
 
@@ -78,9 +90,17 @@
         <li class="function function--3">
           <h3 class="heading-3 heading-light pb-s">Terminate Account</h3>
           <form class="form">
-            <input type="text" placeholder="User" class="input--box" />
-            <input type="text" placeholder="Confirm PIN" class="input--box" />
-            <button class="btn">Process</button>
+            <input
+              type="text"
+              placeholder="User"
+              class="input--box terminate-user"
+            />
+            <input
+              type="text"
+              placeholder="Confirm PIN"
+              class="input--box terminate-pin"
+            />
+            <button class="btn terminate-btn">Process</button>
           </form>
         </li>
       </ul>

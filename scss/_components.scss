@@ -163,7 +163,7 @@
   border-radius: 0.5em;
   padding: 1vw 0.5vw;
   background-color: #f1f3f5;
-  height: 60vh;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -194,7 +194,6 @@
   }
 }
 .full-history {
-  flex: 1;
   margin-right: 2rem;
   display: flex;
   justify-content: flex-end;
