@@ -1,7 +1,7 @@
 # The-Banker-Tetra-Giant
 It's a banker application, where you can use money. You can transfer money, request for loan and close the account. Initially there is no db support. developed only by using Html, css and Js.
 
-Visit the url for live working: https://abhijith0078.github.io/The-Banker-Tetra-Giant-/
+Visit the url for live demo: https://abhijith0078.github.io/The-Banker-Tetra-Giant-/
 
 login credentials:
  - user: a / pin: 1
